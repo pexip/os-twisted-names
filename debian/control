@@ -1,0 +1,26 @@
+Source: twisted-names
+Section: python
+Priority: optional
+Maintainer: Matthias Klose <doko@debian.org>
+Uploaders: Free Ekanayaka <freee@debian.org>
+Build-Depends: debhelper (>= 5.0.37.1), python-all (>= 2.6.5-9~), python-twisted-core (>= 11.1), patch
+XS-Python-Version: all
+Standards-Version: 3.9.2
+
+Package: python-twisted-names
+Architecture: all
+Depends: ${python:Depends}, python-twisted-core (>= 11.1), ${misc:Depends}
+Conflicts: python2.3-twisted-names, python2.4-twisted-names
+Replaces: python2.3-twisted-names, python2.4-twisted-names
+XB-Python-Version: ${python:Versions}
+Description: DNS protocol implementation with client and server
+ Twisted Names is both a domain name server as well as a client
+ resolver library. Twisted Names comes with an "out of the box"
+ nameserver which can read most BIND-syntax zone files as well as a
+ simple Python-based configuration format. Twisted Names can act as an
+ authoritative server, perform zone transfers from a master to act as
+ a secondary, act as a caching nameserver, or any combination of
+ these. Twisted Names' client resolver library provides functions to
+ query for all commonly used record types as well as a replacement for
+ the blocking gethostbyname() function provided by the Python stdlib
+ socket module.
